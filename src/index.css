@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+/* Theme-aware CSS variables for SVG canvas and controls */
+:root {
+  --canvas-bg: #f8fafc;
+  --grid-dot: #e2e8f0;
+  --canvas-text: #64748b;
+}
+.dark {
+  --canvas-bg: #0f172a;
+  --grid-dot: #1f2937;
+  --canvas-text: #94a3b8;
+}
+
+/* Node-specific variables */
+:root {
+  --node-header-bg: #3b82f6;
+  --node-header-text: #ffffff;
+  --node-body-bg: #ffffff;
+  --node-body-text: #1f2937;
+  --node-border: #d1d5db;
+  --node-pk: #eab308;
+  --node-fk: #8b5cf6;
+  --node-meta: #6b7280;
+}
+.dark {
+  --node-header-bg: #2563eb;
+  --node-header-text: #ffffff;
+  --node-body-bg: #0b1220;
+  --node-body-text: #cbd5e1;
+  --node-border: #1f2937;
+  --node-pk: #f59e0b;
+  --node-fk: #a78bfa;
+  --node-meta: #64748b;
+}
+
+/* Utility to hide scrollbar on container while keeping scrolling functional */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* CodeMirror theme overrides */
+.codemirror-wrapper .cm-editor {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  font-size: 13px;
+}
+.codemirror-wrapper .cm-scroller {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+.codemirror-wrapper .cm-gutters {
+  background-color: #f9fafb !important;
+  color: #6b7280 !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+.codemirror-wrapper .cm-activeLineGutter {
+  background-color: #f3f4f6 !important;
+}
+
+/* Dark theme for CodeMirror */
+.dark .codemirror-wrapper .cm-editor {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+}
+.dark .codemirror-wrapper .cm-scroller {
+  background-color: #0f172a !important;
+}
+.dark .codemirror-wrapper .cm-gutters {
+  background-color: #0b1220 !important;
+  color: #64748b !important;
+  border-right: 1px solid #1e293b !important;
+}
+.dark .codemirror-wrapper .cm-activeLineGutter {
+  background-color: #1e293b !important;
+}
+.dark .codemirror-wrapper .cm-activeLine {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+.dark .codemirror-wrapper .cm-selectionBackground {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+}
+.dark .codemirror-wrapper .cm-cursor {
+  border-left-color: #cbd5e1 !important;
+}
+
+/* Error highlighting */
+.cm-error-line {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+.dark .cm-error-line {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+}
+.cm-error-gutter {
+  color: #ef4444 !important;
+  font-weight: bold;
+}
+
+.cm-error-mark {
+  text-decoration: underline wavy #ef4444;
+}
+
+.cm-error-gutter-marker {
+  color: #ef4444;
+  font-weight: bold;
+  padding-left: 2px;
+}

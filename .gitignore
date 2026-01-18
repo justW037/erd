@@ -1,0 +1,8 @@
+node_modules/
+dist/
+/.env
+
+# Ignore task files per user request
+TASKS.md
+task.md
+TASK.md
