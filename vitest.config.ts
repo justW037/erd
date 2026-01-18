@@ -12,6 +12,5 @@ export default defineConfig({
       reporter: ['text', 'html'],
       include: ['src/core/**/*.ts']
     }
-  },
-  base: '/', 
+  }
 })
